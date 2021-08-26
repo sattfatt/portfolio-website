@@ -164,30 +164,42 @@ em {
   flex: 1;
 }
 
-.scroll-clip-overlay {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
+.scroll-clip-overlay-off {
+
+  visibility: visible;
+  opacity: 1;
+/*background-color: red;*/
+  overflow:hidden;
+  border-radius: var(--border-radius);
+  min-width: 100px;
+  margin:10px;
+/*  width: initial;
+  height: initial;*/
+}
+
+.scroll-clip-overlay-on {
+
+  visibility: visible;
+  opacity: 1;
   background-color: blue;
   overflow:hidden;
   border-radius: var(--border-radius);
-  max-height: 500px;
-  min-width: 350px;
-  margin:10px;
+  box-sizing:border-box;
+  z-index: 10;
+  transition: 1s ease;
 }
 
 .scroll-clip {
   overflow:hidden;
   border-radius: var(--border-radius);
-  max-height: 500px;
-  min-width: 350px;
+  min-width: 100px;
   margin:10px;
 }
 
-#scrollable {
+.scrollable {
   margin: 0px;
   word-wrap: break-word;
   overflow-y:scroll;
-  min-width: 150px;
+  min-width: 100px;
   max-height: 450px;
 }

@@ -47,16 +47,16 @@ function InfoBoxes() {
 
             <TextBox title="Projects">
                 <div className="flex-row-boxes">
-                    <Expandable title="a" _id="scrollable" _ref="1">
+                    <Expandable title="a" classes="scrollable" _ref="1">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus suscipit, adipisci, assumenda blanditiis dolores deleniti distinctio corrupti, iusto molestiae sit at laborum inventore doloribus eos odio corporis provident consequuntur. Qui, in. Debitis hic repudiandae ducimus, eveniet voluptatem minus iusto optio. Quibusdam, sint nesciunt? Dolorum aliquam ut in atque tenetur voluptatum, sed iusto fugiat totam consectetur similique, odit reprehenderit? Quo qui alias autem a fuga fugit ad molestiae fugiat hic doloremque laborum, numquam eaque blanditiis nemo dolorem amet nihil ex quas ullam rerum consectetur suscipit officiis rem consequatur. Numquam et iste dolorum? Repellat, error! Soluta officiis debitis nulla recusandae reiciendis.
                     </Expandable>
-                    <Expandable title="b" _id="scrollable"  _ref="2">
+                    <Expandable title="b" classes="scrollable"  _ref="2">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, harum? Maxime nam voluptatem, dolore ab magni non similique ipsam quo corporis, nisi mollitia reiciendis repudiandae illo illum quibusdam voluptas ut.
                     </Expandable>
-                    <Expandable title="c" _id="scrollable"  _ref="3">
+                    <Expandable title="c" classes="scrollable"  _ref="3">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aperiam a laudantium reiciendis alias non explicabo magnam, qui quae dolores dicta animi et rem pariatur, molestias amet consequatur, consequuntur neque.
                     </Expandable>
-                    <Expandable title="d" _id="scrollable"  _ref="4">
+                    <Expandable title="d" classes="scrollable"  _ref="4">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quod alias impedit sed cum aliquid fugit dicta nobis! Libero dignissimos amet quidem maiores eum dicta modi voluptate dolores voluptas quod.
                     </Expandable>
                 </div>

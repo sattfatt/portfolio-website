@@ -2,7 +2,7 @@
 function TextBox(props) {
     return (
 
-            <div className="text-box" id={props._id} onClick={props._onClick}>
+            <div className={"text-box " + props.classes} id={props._id} onClick={props._onClick}>
                 <div className="flex-row">
                     <div className="box-title" id={props._id + "-title"}>{props.title}</div>
                 </div>
