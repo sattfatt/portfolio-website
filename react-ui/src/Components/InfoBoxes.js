@@ -47,11 +47,31 @@ function InfoBoxes() {
 
             <TextBox title="Projects">
                 <div className="flex-row-boxes">
-                    <Expandable title="a" classes="scrollable" _ref="1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus suscipit, adipisci, assumenda blanditiis dolores deleniti distinctio corrupti, iusto molestiae sit at laborum inventore doloribus eos odio corporis provident consequuntur. Qui, in. Debitis hic repudiandae ducimus, eveniet voluptatem minus iusto optio. Quibusdam, sint nesciunt? Dolorum aliquam ut in atque tenetur voluptatum, sed iusto fugiat totam consectetur similique, odit reprehenderit? Quo qui alias autem a fuga fugit ad molestiae fugiat hic doloremque laborum, numquam eaque blanditiis nemo dolorem amet nihil ex quas ullam rerum consectetur suscipit officiis rem consequatur. Numquam et iste dolorum? Repellat, error! Soluta officiis debitis nulla recusandae reiciendis.
+                    <Expandable title="The Third Eye" classes="scrollable" _ref="1">
+                        <div className="project-description">
+                            The Third Eye is an interactive virtual classroom environment build in the Unity game engine. 
+                        </div>
+                        <div className="feature-list-container">
+                            <br></br>
+                            Features:
+                            <ul>
+                                <li>3D Graphing</li>
+                                <li>2D Graphing</li>
+                                <li>In-game LaTeX rendering</li>
+                                <li>Group action visualization of various shapes</li>
+                                <li>Island to hold events (Like a final exam)</li>
+                                <li>Floating window that captures your note taking application!</li>
+                                <li>IRC Chat Interaction</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <iframe width="448" height="252" src="https://www.youtube.com/embed/3SglaCG5mlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </Expandable>
-                    <Expandable title="b" classes="scrollable"  _ref="2">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, harum? Maxime nam voluptatem, dolore ab magni non similique ipsam quo corporis, nisi mollitia reiciendis repudiandae illo illum quibusdam voluptas ut.
+                    <Expandable title="This Website" classes="scrollable" _ref="2">
+                        <div className="project-description">
+                            This website is also one of my projects! I built it using the React framework and handled all the animations and overlays myself using jsx.
+                        </div>
                     </Expandable>
                     <Expandable title="c" classes="scrollable"  _ref="3">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aperiam a laudantium reiciendis alias non explicabo magnam, qui quae dolores dicta animi et rem pariatur, molestias amet consequatur, consequuntur neque.

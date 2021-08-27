@@ -8,49 +8,47 @@ function sleep(ms) {
 }
 
 function Expandable(props) {
-
-    const modalEl = useRef(null);
-    const initialEl = useRef(null);
-    const parentEl = useRef(null);
-    const [overlayStyle, setOverlayStyle] = useState({position:"absolute"})
+    const [overlayStyle, setOverlayStyle] = useState({position:"fixed"})
     const [oToggle, setOtoggle] = useState("off")
 
     const moveToCenter = () => {
-        const x = window.innerWidth / 2 ;
-        const y = window.innerHeight / 2 ;
-        const offsetx = initialEl.current.getBoundingClientRect().width / 2;
-        const offsety = initialEl.current.getBoundingClientRect().height / 2;
-        const rect = {top:y-offsety, left:x-offsetx, width: offsetx*2, height: offsety*2, transition:"0.2s ease", position:"fixed"}
+        const rect = {
+            top:"50%", 
+            left:"50%", 
+            transform:"translate(-50%, -50%)", 
+            //width: "70vw", 
+            transition:"0.5s ease", 
+            position:"fixed"
+        } 
         setOverlayStyle(rect);
         return rect;
     }
 
-    const moveToInitial = () => {
-        const left = initialEl.current.getBoundingClientRect().left;
-        const top = initialEl.current.getBoundingClientRect().top;
-        const leftP =  parentEl.current.getBoundingClientRect().left;
-        const topP = parentEl.current.getBoundingClientRect().top;
-        setOverlayStyle({top: top - topP-10, left: left - leftP-10, position:"absolute"});
+    const moveToFirst = async () => {
+        setOverlayStyle({
+            top:"50%", left:"50%", 
+            transform:"translate(-50%, -55%)", 
+            //width: "70vw", 
+            "max-height":"90vh",
+            transition:"none", 
+            position:"fixed", 
+            visibility:"hidden", 
+            opacity:0
+        });
+        await sleep(100);
     }
 
-    const moveToParent = async () => {
-        const leftP =  parentEl.current.getBoundingClientRect().left;
-        const topP = parentEl.current.getBoundingClientRect().top;
-        setOverlayStyle({top: topP, left: leftP, margin:10, transition:"none", position:"fixed", visibility:"hidden", opacity:0});
-        await sleep(1);
+    const delay = async (ms) => {
+        await sleep(ms);
     }
 
     const onClick = (e) => {
-        if (oToggle === "off") {
-            
+        if (oToggle === "off") {          
             setOtoggle("on");
-            moveToParent().then(moveToCenter)
-           // moveToCenter();
-            
+            moveToFirst().then(moveToCenter)
         }
         else {
-            moveToInitial();
-            setOtoggle("off");
+            setOtoggle("off")
         }
     }
 
@@ -66,23 +64,23 @@ function Expandable(props) {
         }
     });
 
-
-
     return (
-        <div className="expandable-container" ref={parentEl}>
-            <div className={"scroll-clip-overlay-"+oToggle} ref={modalEl} style={overlayStyle}>
+        <div className="expandable-container">
+            <div className={"scroll-clip-overlay-"+oToggle} style={overlayStyle}>
+                <TextBox title={props.title} _id={props._id} classes={props.classes} >
+                    {props.children}
+                </TextBox>
+            </div>
+            <div className="scroll-clip">
                 <TextBox title={props.title} _id={props._id} classes={props.classes} _onClick={onClick}>
-                    {props.children}
+                    {props.children[0] ? props.children[0] : props.children}
                 </TextBox>
             </div>
-            <div className="scroll-clip" ref={initialEl}>
-                <TextBox title={props.title} _id={props._id} classes={props.classes}>
-                    {props.children}
-                </TextBox>
-                
+            <div className={"back-blur-"+oToggle} onClick={onClick}>
+
             </div>
-            
         </div>
+        
     );
 }
 

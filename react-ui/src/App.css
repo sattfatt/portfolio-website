@@ -5,22 +5,32 @@
   --red-1: rgb(255, 58, 58);
   --orange-1: rgb(255, 128, 44);
   --green-1: rgb(19, 233, 0);
-  --box-background-color: rgba(0, 0, 0, 0.226);
+  --box-background-color: rgba(15, 24, 31, 0.452);
+  --overlay-color: rgba(36, 46, 61, 0.842);
+  --overlay-background-color: rgba(62, 69, 82, 0.829);
   --border-radius: 10px;
   background: linear-gradient(var(--gray-1), var(--gray-2));
+  scrollbar-color: var(--blue-1) rgba(255, 0, 0, 0);
+  scrollbar-width: thin;
 }
+
+body {
+  scrollbar-width: thin;
+}
+
 .App {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
+  background: linear-gradient(var(--gray-1), var(--gray-2));
+  
 }
 
 .App-header {
-  
+  font-size: clamp(15px, calc(8px + 1.1vw), 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
   color: white;
 }
 
@@ -59,12 +69,13 @@ em {
   background-color: var(--box-background-color);
   margin: 5px;
   border-radius: var(--border-radius);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.123);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .box-title {
   font-weight: 400;
   text-align: left;
+  font-size: clamp(20px, calc(15px + 1.1vw), 25px);
   margin: 10px 5px;
   background: linear-gradient(90deg, var(--blue-1), white);
   background-clip: text;
@@ -73,17 +84,17 @@ em {
 
 .body-text {
   font-weight: 300;
-  font-size: 20px;
   text-align: left;
   margin: 5px;
 }
 
 .skill {
-  margin: 5px;
+  margin: 0.2em;
   padding: 5px 20px;
   border-radius: 100px;
   color: white;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 0.9em;
 }
 
 #programming {
@@ -100,6 +111,10 @@ em {
 
 #misc {
   background-color:var(--orange-1);
+}
+
+#skills {
+  min-width: 200px;
 }
 
 .flex-row {
@@ -142,11 +157,8 @@ em {
 
 #education {
   min-width: 200px;
-  max-height: 500px;
   flex:1 1;
 }
-
-
 
 ::-webkit-scrollbar {
   width: 3px;
@@ -165,28 +177,22 @@ em {
 }
 
 .scroll-clip-overlay-off {
-
-  visibility: visible;
-  opacity: 1;
-/*background-color: red;*/
+  visibility: hidden;
+  opacity: 0;
   overflow:hidden;
   border-radius: var(--border-radius);
   min-width: 100px;
-  margin:10px;
-/*  width: initial;
-  height: initial;*/
+  z-index: 12;
 }
 
 .scroll-clip-overlay-on {
-
   visibility: visible;
   opacity: 1;
-  background-color: blue;
   overflow:hidden;
   border-radius: var(--border-radius);
-  box-sizing:border-box;
-  z-index: 10;
-  transition: 1s ease;
+  z-index: 12;
+  backdrop-filter: blur(10px);
+  background-color: var(--overlay-color);
 }
 
 .scroll-clip {
@@ -200,6 +206,33 @@ em {
   margin: 0px;
   word-wrap: break-word;
   overflow-y:scroll;
+  scrollbar-color: var(--blue-1) rgba(255, 255, 255, 0);
+  scrollbar-width: thin;
   min-width: 100px;
-  max-height: 450px;
+  max-height: min(450px, 70vh);
+}
+
+.back-blur-on {
+  position:fixed;
+  top:0px;
+  left:1px; 
+  width:100vw;
+  height: 100vh; 
+  z-index:9;
+  visibility:visible; 
+  opacity:1;
+  transition: opacity 0.2s linear;
+  background-color: var(--overlay-background-color);
+}
+
+.back-blur-off {
+  position:fixed;
+  top:0px;
+  left:1px; 
+  width:100vw;
+  height: 100vh; 
+  z-index:9;
+  pointer-events: none;
+  opacity:0;
+  transition: 0.7s linear 0.2s;
 }
