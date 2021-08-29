@@ -1,0 +1,23 @@
+.text-box {
+    padding: 20px;
+    background-color: var(--box-background-color);
+    margin: 5px;
+    border-radius: var(--border-radius);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  
+  .box-title {
+    font-weight: 400;
+    text-align: left;
+    font-size: clamp(20px, calc(15px + 1.1vw), 25px);
+    margin: 10px 5px;
+    background: linear-gradient(90deg, var(--blue-1), white);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .body-text {
+    font-weight: 300;
+    text-align: left;
+    margin: 5px;
+  }

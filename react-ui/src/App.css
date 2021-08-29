@@ -1,6 +1,6 @@
 :root {
   --gray-1: #bbbbbb;
-  --gray-2: #303030;
+  --gray-2: #2f3e4d;
   --blue-1: rgba(99, 208, 255, 1);
   --red-1: rgb(255, 58, 58);
   --orange-1: rgb(255, 128, 44);
@@ -9,12 +9,14 @@
   --overlay-color: rgba(36, 46, 61, 0.842);
   --overlay-background-color: rgba(62, 69, 82, 0.829);
   --border-radius: 10px;
-  background: linear-gradient(var(--gray-1), var(--gray-2));
-  scrollbar-color: var(--blue-1) rgba(255, 0, 0, 0);
-  scrollbar-width: thin;
+  --border-color: rgb(45, 60, 90);
+  --gradient-1: linear-gradient(var(--gray-1), var(--gray-2));
+  
 }
 
 body {
+  background: var(--gradient-1);
+  scrollbar-color: var(--blue-1) var(--gradient-1);
   scrollbar-width: thin;
 }
 
@@ -22,7 +24,6 @@ body {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
   background: linear-gradient(var(--gray-1), var(--gray-2));
-  
 }
 
 .App-header {
@@ -64,76 +65,12 @@ em {
   font-weight: 200;
 }
 
-.text-box {
-  padding: 20px;
-  background-color: var(--box-background-color);
-  margin: 5px;
-  border-radius: var(--border-radius);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-.box-title {
-  font-weight: 400;
-  text-align: left;
-  font-size: clamp(20px, calc(15px + 1.1vw), 25px);
-  margin: 10px 5px;
-  background: linear-gradient(90deg, var(--blue-1), white);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.body-text {
-  font-weight: 300;
-  text-align: left;
-  margin: 5px;
-}
-
-.skill {
-  margin: 0.2em;
-  padding: 5px 20px;
-  border-radius: 100px;
-  color: white;
-  font-weight: 400;
-  font-size: 0.9em;
-}
-
-#programming {
-  background-color: var(--blue-1);
-}
-
-#electrical {
-  background-color: var(--green-1);
-}
-
-#game {
-  background-color: var(--red-1);
-}
-
-#misc {
-  background-color:var(--orange-1);
-}
-
-#skills {
-  min-width: 200px;
-}
-
 .flex-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: left;
-}
-
-.flex-row-lotus {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.lotus {
-  transform: scale(1.5);
 }
 
 .flex-row-boxes {
@@ -151,88 +88,30 @@ em {
   justify-content: left;
 }
 
-#skills {
-  flex:3
+.flex-row-lotus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-#education {
-  min-width: 200px;
-  flex:1 1;
+.lotus {
+  transform: scale(1.5);
 }
 
-::-webkit-scrollbar {
-  width: 3px;
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
   background-color: transparent;
-  
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: var(--blue-1);
   border-radius: var(--border-radius);
 }
 
-.expandable-container {
-  position: relative;
-  flex: 1;
-}
 
-.scroll-clip-overlay-off {
-  visibility: hidden;
-  opacity: 0;
-  overflow:hidden;
-  border-radius: var(--border-radius);
-  min-width: 100px;
-  z-index: 12;
-}
 
-.scroll-clip-overlay-on {
-  visibility: visible;
-  opacity: 1;
-  overflow:hidden;
-  border-radius: var(--border-radius);
-  z-index: 12;
-  backdrop-filter: blur(10px);
-  background-color: var(--overlay-color);
-}
-
-.scroll-clip {
-  overflow:hidden;
-  border-radius: var(--border-radius);
-  min-width: 100px;
-  margin:10px;
-}
-
-.scrollable {
-  margin: 0px;
-  word-wrap: break-word;
-  overflow-y:scroll;
-  scrollbar-color: var(--blue-1) rgba(255, 255, 255, 0);
-  scrollbar-width: thin;
-  min-width: 100px;
-  max-height: min(450px, 70vh);
-}
-
-.back-blur-on {
-  position:fixed;
-  top:0px;
-  left:1px; 
-  width:100vw;
-  height: 100vh; 
-  z-index:9;
-  visibility:visible; 
-  opacity:1;
-  transition: opacity 0.2s linear;
-  background-color: var(--overlay-background-color);
-}
-
-.back-blur-off {
-  position:fixed;
-  top:0px;
-  left:1px; 
-  width:100vw;
-  height: 100vh; 
-  z-index:9;
-  pointer-events: none;
-  opacity:0;
-  transition: 0.7s linear 0.2s;
+#education {
+  flex:1;
 }

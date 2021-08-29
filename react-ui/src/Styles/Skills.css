@@ -1,0 +1,32 @@
+.skill {
+    margin: 0.2em;
+    padding: 5px 20px;
+    border-radius: 100px;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9em;
+  }
+  
+  #skills {
+    min-width: 200px;
+    flex:2;
+  }
+  #Programming {
+    background-color: var(--blue-1);
+  }
+  
+  #Electrical {
+    background-color: var(--green-1);
+  }
+  
+  #GameDev {
+    background-color: var(--red-1);
+  }
+  
+  #Misc {
+    background-color:var(--orange-1);
+  }
+  
+  #Concepts {
+    background-color:rgb(105, 0, 175);
+  }

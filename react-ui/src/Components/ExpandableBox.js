@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import TextBox from "./TextBox";
-import {useRef} from "react";
-
+import VidRefreshContext from "../Contexts/VideoRefreshContext";
+import "../Styles/ExpandableBox.css";
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -10,13 +10,14 @@ function sleep(ms) {
 function Expandable(props) {
     const [overlayStyle, setOverlayStyle] = useState({position:"fixed"})
     const [oToggle, setOtoggle] = useState("off")
+    const [delayedToggle, setDelayedToggle] = useState(false);
 
     const moveToCenter = () => {
         const rect = {
             top:"50%", 
             left:"50%", 
             transform:"translate(-50%, -50%)", 
-            //width: "70vw", 
+            width: "70vw", 
             transition:"0.5s ease", 
             position:"fixed"
         } 
@@ -46,10 +47,13 @@ function Expandable(props) {
         if (oToggle === "off") {          
             setOtoggle("on");
             moveToFirst().then(moveToCenter)
+            setDelayedToggle(true);
         }
         else {
-            setOtoggle("off")
+            setOtoggle("off");
+            delay(400).then(()=>{setDelayedToggle(false)});
         }
+        
     }
 
     useEffect(() => {
@@ -65,21 +69,23 @@ function Expandable(props) {
     });
 
     return (
-        <div className="expandable-container">
-            <div className={"scroll-clip-overlay-"+oToggle} style={overlayStyle}>
-                <TextBox title={props.title} _id={props._id} classes={props.classes} >
-                    {props.children}
-                </TextBox>
-            </div>
-            <div className="scroll-clip">
-                <TextBox title={props.title} _id={props._id} classes={props.classes} _onClick={onClick}>
-                    {props.children[0] ? props.children[0] : props.children}
-                </TextBox>
-            </div>
-            <div className={"back-blur-"+oToggle} onClick={onClick}>
+        <VidRefreshContext.Provider value={delayedToggle}>
+            <div className="expandable-container">
+                <div className={"scroll-clip-overlay-"+oToggle} style={overlayStyle}>
+                    <TextBox title={props.title} _id={props._id} classes={props.classes} >
+                        {props.children}
+                    </TextBox>
+                </div>
+                <div className="scroll-clip">
+                    <TextBox title={props.title} _id={props._id} classes={props.classes} _onClick={onClick}>
+                        {props.children[0] ? props.children[0] : props.children}
+                    </TextBox>
+                </div>
+                <div className={"back-blur-"+oToggle} onClick={onClick}>
 
+                </div>
             </div>
-        </div>
+        </VidRefreshContext.Provider>
         
     );
 }

@@ -1,0 +1,79 @@
+.back-blur-on {
+    position: fixed;
+    top: 0px;
+    left: 1px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+    background-color: var(--overlay-background-color);
+}
+
+.back-blur-off {
+    position: fixed;
+    top: 0px;
+    left: 1px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.7s linear 0.2s;
+}
+
+.expandable-container {
+    position: relative;
+    flex: 1;
+    
+}
+
+.scroll-clip-overlay-off {
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    min-width: 100px;
+    z-index: 12;
+}
+
+.scroll-clip-overlay-on {
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    z-index: 12;
+    backdrop-filter: blur(10px);
+    background-color: var(--overlay-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.scroll-clip {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    min-width: 100px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.scrollable {
+    margin: 0px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    scrollbar-color: var(--blue-1) rgba(255, 255, 255, 0);
+    scrollbar-width: thin;
+    min-width: 100px;
+    max-height: min(450px, 70vh);
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: transparent
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: var(--blue-1);
+    border-radius: var(--border-radius);
+}

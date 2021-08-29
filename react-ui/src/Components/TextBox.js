@@ -1,4 +1,6 @@
 
+import '../Styles/TextBox.css'
+
 function TextBox(props) {
     return (
 
@@ -8,8 +10,6 @@ function TextBox(props) {
                 </div>
                 <div className="body-text">{props.children}</div>
             </div>
-
-
     )
 }
 
