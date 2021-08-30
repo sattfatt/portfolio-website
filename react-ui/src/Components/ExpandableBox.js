@@ -17,7 +17,9 @@ function Expandable(props) {
             top:"50%", 
             left:"50%", 
             transform:"translate(-50%, -50%)", 
-            width: "70vw", 
+            "max-width": "90vw",
+            "max-height":"90vh",
+            "min-width": "70vw", 
             transition:"0.5s ease", 
             position:"fixed"
         } 
@@ -29,8 +31,9 @@ function Expandable(props) {
         setOverlayStyle({
             top:"50%", left:"50%", 
             transform:"translate(-50%, -55%)", 
-            //width: "70vw", 
+            "max-width": "90vw",
             "max-height":"90vh",
+            "min-width": "70vw",  
             transition:"none", 
             position:"fixed", 
             visibility:"hidden", 
@@ -76,7 +79,7 @@ function Expandable(props) {
                         {props.children}
                     </TextBox>
                 </div>
-                <div className="scroll-clip">
+                <div className="scroll-clip noselect">
                     <TextBox title={props.title} _id={props._id} classes={props.classes} _onClick={onClick}>
                         {props.children[0] ? props.children[0] : props.children}
                     </TextBox>

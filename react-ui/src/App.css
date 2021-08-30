@@ -15,15 +15,17 @@
 }
 
 body {
-  background: var(--gradient-1);
-  scrollbar-color: var(--blue-1) var(--gradient-1);
-  scrollbar-width: thin;
+  overflow:hidden;
 }
 
 .App {
   text-align: center;
   font-family: 'Work Sans', sans-serif;
-  background: linear-gradient(var(--gray-1), var(--gray-2));
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-color: var(--blue-1) var(--gradient-1);
+  scrollbar-width: thin;
+  background: var(--gradient-1);
 }
 
 .App-header {
@@ -33,6 +35,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
+  
 }
 
 .full-page-view {
@@ -54,7 +57,6 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 100px;
-  max-width: 90vw;
 }
 
 h1 {
@@ -99,14 +101,15 @@ em {
   transform: scale(1.5);
 }
 
-body::-webkit-scrollbar {
+.App::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   background-color: transparent;
 }
 
-body::-webkit-scrollbar-thumb {
+.App::-webkit-scrollbar-thumb {
   background-color: var(--blue-1);
+  color:var(--blue-1);
   border-radius: var(--border-radius);
 }
 

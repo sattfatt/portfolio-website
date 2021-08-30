@@ -26,7 +26,6 @@
 .expandable-container {
     position: relative;
     flex: 1;
-    
 }
 
 .scroll-clip-overlay-off {
@@ -49,12 +48,27 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+@media (hover: hover) {
+    .scroll-clip:hover {
+        filter: contrast(1.2) saturate(0.9);
+        box-shadow: var(--blue-1) 0px 0px 0px 2px;
+        transition: filter 0.5s ease;
+        transition: box-shadow 0.1s ease;
+    }
+}
+
+.scroll-clip:active {
+    filter: brightness(0.5);
+    transition: 0.2s ease;
+}
+
 .scroll-clip {
     overflow: hidden;
     border-radius: var(--border-radius);
-    min-width: 100px;
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: filter 0.5s ease;
+    
 }
 
 .scrollable {
@@ -63,8 +77,7 @@
     overflow-y: scroll;
     scrollbar-color: var(--blue-1) rgba(255, 255, 255, 0);
     scrollbar-width: thin;
-    min-width: 100px;
-    max-height: min(450px, 70vh);
+    max-height: 70vh;
 }
 
 .scrollable::-webkit-scrollbar {
@@ -77,3 +90,12 @@
     background-color: var(--blue-1);
     border-radius: var(--border-radius);
 }
+
+.noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  }

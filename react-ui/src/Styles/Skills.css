@@ -1,10 +1,25 @@
 .skill {
     margin: 0.2em;
-    padding: 5px 20px;
+    padding: 0.2em 0.8em;
     border-radius: 100px;
-    color: white;
-    font-weight: 400;
+    color: rgb(75, 75, 75);
+    font-weight: 300;
     font-size: 0.9em;
+    background-color:rgba(65, 65, 65, 0);
+    color: white;
+    border: 2px solid;
+  }
+
+  .mini-container {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .mini-container>div>span {
+    font-size: 0.7em;
+    padding: 0.2em 0.9em;
+
   }
   
   #skills {
@@ -12,21 +27,21 @@
     flex:2;
   }
   #Programming {
-    background-color: var(--blue-1);
+    border-color: var(--blue-1);
   }
   
   #Electrical {
-    background-color: var(--green-1);
+    border-color: var(--green-1);
   }
   
   #GameDev {
-    background-color: var(--red-1);
+    border-color: var(--red-1);
   }
   
   #Misc {
-    background-color:var(--orange-1);
+    border-color:var(--orange-1);
   }
   
   #Concepts {
-    background-color:rgb(105, 0, 175);
+    border-color: rgb(162, 0, 255);
   }

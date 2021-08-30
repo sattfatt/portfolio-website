@@ -42,6 +42,7 @@ function InfoBoxes() {
                         
                         <div className="project-description">
                             An interactive virtual classroom environment built in the Unity game engine. Features 3D graphing, chat interaction, and more!
+                            <Skills mini skills={{GameDev:['Unity', 'Blender', 'Photoshop'], Programming:['C#']}}></Skills>
                         </div>
                         
                         <div className="flex-row">
@@ -66,17 +67,21 @@ function InfoBoxes() {
                     <Expandable title="This Website" classes="scrollable" _ref="2">
                         <div className="project-description">
                             This website is also one of my projects! I built it using the React framework and handled all the animations and overlays myself using jsx.
+                            <Skills mini skills={{Programming:['Nodejs', 'React', 'Javascript', 'HTML', 'CSS']}}></Skills>
                         </div>
                     </Expandable>
                     <Expandable title="LightBox" classes="scrollable" _ref="3">
                         <div>
                             A 3D printed box that lights things up on top of it. Features fully remote control via web api and udp communication.
+                            <Skills mini skills={{Electrical:['Raspberry Pi', 'ESP32','Arduino'], Programming:['C', 'C#']}}></Skills>
                         </div>
                     </Expandable>
                     <Expandable title="Exercise Tracker" classes="scrollable" _ref="4">
                         <div>
                             A simple full-stack MERN application that allows the user to bookeep their exercises. Features RESTful api and CRUD operations to a database.
+                            <Skills mini skills={{Programming:['MongoDB','Express','Nodejs', 'React', 'Javascript', 'HTML', 'CSS']}}></Skills>
                         </div>
+                        
                     </Expandable>
                 </div>
             </TextBox>
