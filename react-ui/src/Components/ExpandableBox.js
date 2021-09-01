@@ -17,9 +17,9 @@ function Expandable(props) {
             top:"50%", 
             left:"50%", 
             transform:"translate(-50%, -50%)", 
-            "max-width": "90vw",
-            "max-height":"90vh",
-            "min-width": "70vw", 
+            maxWidth: "90vw",
+            maxHeight:"90vh",
+            minWidth: "70vw", 
             transition:"0.5s ease", 
             position:"fixed"
         } 
@@ -31,9 +31,9 @@ function Expandable(props) {
         setOverlayStyle({
             top:"50%", left:"50%", 
             transform:"translate(-50%, -55%)", 
-            "max-width": "90vw",
-            "max-height":"90vh",
-            "min-width": "70vw",  
+            maxWidth: "90vw",
+            maxHeight:"90vh",
+            minWidth: "70vw",  
             transition:"none", 
             position:"fixed", 
             visibility:"hidden", 

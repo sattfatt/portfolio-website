@@ -11,8 +11,8 @@ function Lotus() {
                 <path d="M18.9275 0L25.1866 12.4782L18.9275 24.9564L12.6683 12.4782L18.9275 0Z" fill="#63D0FF" />
             </g>
             <defs>
-                <filter id="filter0_d" x="0" y="4.93603" width="38" height="28.064" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d" x="0" y="4.93603" width="38" height="28.064" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
@@ -21,8 +21,8 @@ function Lotus() {
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                 </filter>
-                <filter id="filter1_d" x="8.66833" y="0" width="20.5183" height="32.9564" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter1_d" x="8.66833" y="0" width="20.5183" height="32.9564" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />

@@ -23,7 +23,7 @@ function InfoBoxes() {
             </TextBox>
 
             <div className="flex-row-boxes">
-                <Skills title="Skills" skills={skills} id="skills" />
+                <Skills unique="main-skills" title="Skills" skills={skills} id="skills" />
                 <TextBox title="Education" _id="education">
                     <div className="flex-col-boxes">
                         <TextBox title="B.S. Electrical Engineering" _id="edu">
@@ -42,7 +42,7 @@ function InfoBoxes() {
                         
                         <div className="project-description">
                             An interactive virtual classroom environment built in the Unity game engine. Features 3D graphing, chat interaction, and more!
-                            <Skills mini skills={{GameDev:['Unity', 'Blender', 'Photoshop'], Programming:['C#']}}></Skills>
+                            <Skills unique="third-eye-skills" mini skills={{GameDev:['Unity', 'Blender', 'Photoshop'], Programming:['C#']}}></Skills>
                         </div>
                         
                         <div className="flex-row">
@@ -59,7 +59,7 @@ function InfoBoxes() {
                                 </ul>
                             </div>
                             <Video>
-                                <iframe className="aspect-content" src='https://www.youtube.com/embed/3SglaCG5mlE?start=3360&end=3390' frameborder='0' allowfullscreen></iframe>
+                                <iframe className="aspect-content" src='https://www.youtube.com/embed/3SglaCG5mlE?start=3360&end=3390' frameBorder='0' allowFullScreen></iframe>
                             </Video>
                         </div>
                         <GdImageBackground img_id="1-FHNxzlRQyyuuePdp5kCzNzHexCfHc3B" type="background"/>
@@ -67,19 +67,19 @@ function InfoBoxes() {
                     <Expandable title="This Website" classes="scrollable" _ref="2">
                         <div className="project-description">
                             This website is also one of my projects! I built it using the React framework and handled all the animations and overlays myself using jsx.
-                            <Skills mini skills={{Programming:['Nodejs', 'React', 'Javascript', 'HTML', 'CSS']}}></Skills>
+                            <Skills unique="website-skills" mini skills={{Programming:['Nodejs', 'React', 'Javascript', 'HTML', 'CSS']}}></Skills>
                         </div>
                     </Expandable>
                     <Expandable title="LightBox" classes="scrollable" _ref="3">
                         <div>
                             A 3D printed box that lights things up on top of it. Features fully remote control via web api and udp communication.
-                            <Skills mini skills={{Electrical:['Raspberry Pi', 'ESP32','Arduino'], Programming:['C', 'C#']}}></Skills>
+                            <Skills unique="lightbox-skills" mini skills={{Electrical:['Raspberry Pi', 'ESP32','Arduino'], Programming:['C', 'C#']}}></Skills>
                         </div>
                     </Expandable>
                     <Expandable title="Exercise Tracker" classes="scrollable" _ref="4">
                         <div>
                             A simple full-stack MERN application that allows the user to bookeep their exercises. Features RESTful api and CRUD operations to a database.
-                            <Skills mini skills={{Programming:['MongoDB','Express','Nodejs', 'React', 'Javascript', 'HTML', 'CSS']}}></Skills>
+                            <Skills unique="exercise-skills"  mini skills={{Programming:['MongoDB','Express','Nodejs', 'React', 'Javascript', 'HTML', 'CSS']}}></Skills>
                         </div>
                         
                     </Expandable>

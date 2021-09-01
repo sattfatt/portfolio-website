@@ -58,8 +58,18 @@
 }
 
 .scroll-clip:active {
-    filter: brightness(0.5);
-    transition: 0.2s ease;
+    
+    transform: scale(0.98);
+    transition: 0.1s ease;
+}
+
+@keyframes press {
+    0% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(0.5);
+    }
 }
 
 .scroll-clip {
