@@ -39,12 +39,12 @@ function InfoBoxes() {
             <TextBox title="Projects">
                 <div className="flex-row-boxes">
                     <Expandable title="The Third Eye" classes="scrollable" _ref="1">
-                        
+
                         <div className="project-description">
                             An interactive virtual classroom environment built in the Unity game engine. Features 3D graphing, chat interaction, and more!
-                            <Skills unique="third-eye-skills" mini skills={{GameDev:['Unity', 'Blender', 'Photoshop'], Programming:['C#']}}></Skills>
+                            <Skills unique="third-eye-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
                         </div>
-                        
+
                         <div className="flex-row">
                             <div className="feature-list-container">
                                 Features:
@@ -62,30 +62,40 @@ function InfoBoxes() {
                                 <iframe className="aspect-content" src='https://www.youtube.com/embed/3SglaCG5mlE?start=3360&end=3390' frameBorder='0' allowFullScreen></iframe>
                             </Video>
                         </div>
-                        <GdImageBackground img_id="1-FHNxzlRQyyuuePdp5kCzNzHexCfHc3B" type="background"/>
+                        <GdImageBackground img_id="1-FHNxzlRQyyuuePdp5kCzNzHexCfHc3B" type="background" />
                     </Expandable>
                     <Expandable title="This Website" classes="scrollable" _ref="2">
                         <div className="project-description">
                             This website is also one of my projects! I built it using the React framework and handled all the animations and overlays myself using jsx.
-                            <Skills unique="website-skills" mini skills={{Programming:['Nodejs', 'React', 'Javascript', 'HTML', 'CSS']}}></Skills>
+                            <Skills unique="website-skills" mini skills={{ Programming: ['Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
                     </Expandable>
                     <Expandable title="LightBox" classes="scrollable" _ref="3">
                         <div>
                             A 3D printed box that lights things up on top of it. Features fully remote control via web api and udp communication.
-                            <Skills unique="lightbox-skills" mini skills={{Electrical:['Raspberry Pi', 'ESP32','Arduino'], Programming:['C', 'C#']}}></Skills>
+                            <Skills unique="lightbox-skills" mini skills={{ Electrical: ['Raspberry Pi', 'ESP32', 'Arduino'], Programming: ['C', 'C#'] }}></Skills>
                         </div>
                     </Expandable>
                     <Expandable title="Exercise Tracker" classes="scrollable" _ref="4">
                         <div>
                             A simple full-stack MERN application that allows the user to bookeep their exercises. Features RESTful api and CRUD operations to a database.
-                            <Skills unique="exercise-skills"  mini skills={{Programming:['MongoDB','Express','Nodejs', 'React', 'Javascript', 'HTML', 'CSS']}}></Skills>
+                            <Skills unique="exercise-skills" mini skills={{ Programming: ['MongoDB', 'Express', 'Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
-                        
+                    </Expandable>
+                    <Expandable title="Bhimsen" classes="scrollable" _ref="5">
+                        <div>
+                            An indian classical rhythm game built in the Unity engine.
+                            <Skills unique="bhimsen-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
+                        </div>
+                    </Expandable>
+                    <Expandable title="Fun AI" classes="scrollable">
+                        <div>
+                            A 1v1 game that slowly reaches an optimal state. Each AI agent is controled via a FFNN and weights are updated using a genetic algorithm.
+                            <Skills unique="ai-skills" mini skills={{Programming:["Python"]}}></Skills>
+                        </div>
                     </Expandable>
                 </div>
             </TextBox>
-
         </div>
     );
 }

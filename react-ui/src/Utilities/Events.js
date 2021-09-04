@@ -40,4 +40,9 @@ function trigger(eventType, data) {
     document.dispatchEvent(event);
 }
 
-export {on, once, off, trigger}
+async function triggerAsync(eventType, data) {
+    const event = new CustomEvent(eventType, {detail:data});
+    document.dispatchEvent(event);
+}
+
+export {on, once, off, trigger, triggerAsync}

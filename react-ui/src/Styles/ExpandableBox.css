@@ -33,7 +33,6 @@
     opacity: 0;
     overflow: hidden;
     border-radius: var(--border-radius);
-    min-width: 100px;
     z-index: 12;
 }
 
@@ -78,7 +77,7 @@
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     transition: filter 0.5s ease;
-    
+    min-width: 40vw;
 }
 
 .scrollable {
