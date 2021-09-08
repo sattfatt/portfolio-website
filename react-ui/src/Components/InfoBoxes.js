@@ -3,6 +3,8 @@ import TextBox from "./TextBox";
 import Skills from "./Skills"
 import Video from "./Video";
 import GdImageBackground from "./GDriveImage";
+import {VscGithubInverted as Git} from "react-icons/vsc"
+import Github from "./Github";
 
 function InfoBoxes() {
 
@@ -44,7 +46,7 @@ function InfoBoxes() {
                             An interactive virtual classroom environment built in the Unity game engine. Features 3D graphing, chat interaction, and more!
                             <Skills unique="third-eye-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
                         </div>
-
+                        <GdImageBackground img_id="1-FHNxzlRQyyuuePdp5kCzNzHexCfHc3B" type="background" z={-1}/>
                         <div className="flex-row">
                             <div className="feature-list-container">
                                 Features:
@@ -62,13 +64,14 @@ function InfoBoxes() {
                                 <iframe className="aspect-content" src='https://www.youtube.com/embed/3SglaCG5mlE?start=3360&end=3390' frameBorder='0' allowFullScreen></iframe>
                             </Video>
                         </div>
-                        <GdImageBackground img_id="1-FHNxzlRQyyuuePdp5kCzNzHexCfHc3B" type="background" />
+
                     </Expandable>
                     <Expandable title="This Website" classes="scrollable" _ref="2">
                         <div className="project-description">
                             This website is also one of my projects! I built it using the React framework and handled all the animations and overlays myself using jsx.
                             <Skills unique="website-skills" mini skills={{ Programming: ['Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
+                        <Github linkTo="https://github.com/sattfatt/portfolio-website"></Github>
                     </Expandable>
                     <Expandable title="LightBox" classes="scrollable" _ref="3">
                         <div>
@@ -81,17 +84,44 @@ function InfoBoxes() {
                             A simple full-stack MERN application that allows the user to bookeep their exercises. Features RESTful api and CRUD operations to a database.
                             <Skills unique="exercise-skills" mini skills={{ Programming: ['MongoDB', 'Express', 'Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
+                        <article>
+                            This project was a final project for my web development class. 
+                            The project taught me the necessity of seperating concerns and the utility of creating RESTful web services for easy CRUD operations.
+                            It was cool to learn how you can integrate many different web services to create a more complex system. 
+                        </article>
+                        <Github linkTo="https://github.com/sattfatt/exercise-tracker"></Github>
+                        
                     </Expandable>
                     <Expandable title="Bhimsen" classes="scrollable" _ref="5">
                         <div>
                             An indian classical rhythm game built in the Unity engine.
                             <Skills unique="bhimsen-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
                         </div>
+                        <article>
+                            This game is still in progress. I plan on finishing it someday as its more of a lifetime goal of mine. 
+                        </article>
+                    </Expandable>
+                    <Expandable title="Kuba Game" classes="scrollable">
+                        <div>
+                            Implements the Kuba game in Python in the CLI. This was one of my portfolio projects for Intro to CS.
+                            <Skills unique="kuba-skills" mini skills={{ Programming: ["Python"] }}></Skills>
+                        </div>
+                        <article>
+                            This is a 2 player game where the object is to capture 7 neutral marbles or by pushing off all of the oppositions marbles. You can see more info here: <a href="https://sites.google.com/site/boardandpieces/list-of-games/kuba" target="_blank" rel="noopener noreferrer">Kuba Game</a>
+                        </article>
+                        <Github linkTo="https://github.com/sattfatt/kuba"></Github>
+                    </Expandable>
+                    <Expandable title="Graphs" classes="scrollable">
+                        <div>
+                            Implements directed and undirected graphs in python. Each implementation has various traversal methods as well as common algorithms like loop detection and Djikstras algorithm.
+                            <Skills unique="graphs-skills" mini skills={{ Programming: ["Python"] }}></Skills>
+                        </div>
+                        <Github linkTo="https://github.com/sattfatt/graph"></Github>
                     </Expandable>
                     <Expandable title="Fun AI" classes="scrollable">
                         <div>
                             A 1v1 game that slowly reaches an optimal state. Each AI agent is controled via a FFNN and weights are updated using a genetic algorithm.
-                            <Skills unique="ai-skills" mini skills={{Programming:["Python"]}}></Skills>
+                            <Skills unique="ai-skills" mini skills={{ Programming: ["Python"] }}></Skills>
                         </div>
                     </Expandable>
                 </div>
