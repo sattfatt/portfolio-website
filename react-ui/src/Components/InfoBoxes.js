@@ -5,6 +5,7 @@ import Video from "./Video";
 import GdImageBackground from "./GDriveImage";
 import {VscGithubInverted as Git} from "react-icons/vsc"
 import Github from "./Github";
+import GdImage from "./GDriveImage";
 
 function InfoBoxes() {
 
@@ -123,7 +124,23 @@ function InfoBoxes() {
                             A 1v1 game that slowly reaches an optimal state. Each AI agent is controled via a FFNN and weights are updated using a genetic algorithm.
                             <Skills unique="ai-skills" mini skills={{ Programming: ["Python"] }}></Skills>
                         </div>
+                        
+                        <article>This code is pretty old. I did this project mainly to learn how to code in python. Its definitly not the cleanest code I have written but its always nice to see where one started. In fact the code is so old that I dont even remember what dependencies are needed to run it :p</article>
+
+                        <Github linkTo="https://github.com/sattfatt/Simple-AI/blob/master/pygame1/oneonone.py"></Github>
                     </Expandable>
+                </div>
+            </TextBox>
+        
+            <TextBox title="Art">
+                <div className="flex-row-boxes">
+                    <GdImage img_id="1pS3w9bv47voJwRJCwTKj3RG2Uj2Ip3vF"></GdImage>
+                    <GdImage img_id="1wJH1V3xbGRZE81qfZhPT42a3Jsrttkhm"></GdImage>
+                    <GdImage img_id="1jf8eitErqxtw-BkWsaI8M7BVc_KU-Lg9"></GdImage>
+                    <GdImage img_id=""></GdImage>
+                    <GdImage img_id=""></GdImage>
+                    <GdImage img_id=""></GdImage>
+                    <GdImage img_id=""></GdImage>
                 </div>
             </TextBox>
         </div>
