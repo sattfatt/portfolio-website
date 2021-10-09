@@ -18,7 +18,7 @@ function InfoBoxes() {
     };
 
     return (
-        <div className="info-box">
+        <div className="info-box" id="scroll-to-first">
             <TextBox title="About Me">
                 Hello my name is Satyam Patel.
                 I am a budding Computer Scientist, Electrical Engineer, Amateur Game Dev and Amateur C.G. Artist.
@@ -47,7 +47,7 @@ function InfoBoxes() {
                             An interactive virtual classroom environment built in the Unity game engine. Features 3D graphing, chat interaction, and more!
                             <Skills unique="third-eye-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
                         </div>
-                        <GdImageBackground img_id="1-FHNxzlRQyyuuePdp5kCzNzHexCfHc3B" type="background" z={-1}/>
+                        <GdImageBackground url="https://i.imgur.com/0ItBHhB.png" type="background" z={-1}/>
                         <div className="flex-row">
                             <div className="feature-list-container">
                                 Features:
@@ -82,12 +82,12 @@ function InfoBoxes() {
                     </Expandable>
                     <Expandable title="Exercise Tracker" classes="scrollable" _ref="4">
                         <div>
-                            A simple full-stack MERN application that allows the user to bookeep their exercises. Features RESTful api and CRUD operations to a database.
+                            A simple full-stack MERN application that allows the user to bookkeep their exercises. Features RESTful api and CRUD operations to a database.
                             <Skills unique="exercise-skills" mini skills={{ Programming: ['MongoDB', 'Express', 'Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
                         <article>
                             This project was a final project for my web development class. 
-                            The project taught me the necessity of seperating concerns and the utility of creating RESTful web services for easy CRUD operations.
+                            The project taught me how important it is to separate concerns and the utility of creating RESTful web services for easy CRUD operations.
                             It was cool to learn how you can integrate many different web services to create a more complex system. 
                         </article>
                         <Github linkTo="https://github.com/sattfatt/exercise-tracker"></Github>
@@ -125,7 +125,7 @@ function InfoBoxes() {
                             <Skills unique="ai-skills" mini skills={{ Programming: ["Python"] }}></Skills>
                         </div>
                         
-                        <article>This code is pretty old. I did this project mainly to learn how to code in python. Its definitly not the cleanest code I have written but its always nice to see where one started. In fact the code is so old that I dont even remember what dependencies are needed to run it :p</article>
+                        <article>This code is pretty old. I did this project mainly to learn how to code in python. Its definitly not the cleanest code I have written but its always nice to see where I started. In fact the code is so old that I dont even remember what dependencies are needed to run it :p</article>
 
                         <Github linkTo="https://github.com/sattfatt/Simple-AI/blob/master/pygame1/oneonone.py"></Github>
                     </Expandable>
@@ -134,13 +134,11 @@ function InfoBoxes() {
         
             <TextBox title="Art">
                 <div className="flex-row-boxes">
-                    <GdImage img_id="1pS3w9bv47voJwRJCwTKj3RG2Uj2Ip3vF"></GdImage>
-                    <GdImage img_id="1wJH1V3xbGRZE81qfZhPT42a3Jsrttkhm"></GdImage>
-                    <GdImage img_id="1jf8eitErqxtw-BkWsaI8M7BVc_KU-Lg9"></GdImage>
-                    <GdImage img_id=""></GdImage>
-                    <GdImage img_id=""></GdImage>
-                    <GdImage img_id=""></GdImage>
-                    <GdImage img_id=""></GdImage>
+                    <GdImage url="https://i.imgur.com/JXgJDzX.png"></GdImage>
+                    <GdImage url="https://i.imgur.com/zx0n3bc.jpg"></GdImage>
+                    <GdImage url="https://i.imgur.com/gIdj7T2.png"></GdImage>
+                    <GdImage url="https://i.imgur.com/ntcJUoG.png"></GdImage>
+                    <GdImage url="https://i.imgur.com/rnqBdJe.gif"></GdImage>
                 </div>
             </TextBox>
         </div>

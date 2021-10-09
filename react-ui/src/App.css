@@ -75,7 +75,7 @@ em {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
-  justify-content: left;
+  justify-content: center;
 }
 
 .flex-col-boxes {
@@ -107,8 +107,6 @@ em {
   color:var(--blue-1);
   border-radius: var(--border-radius);
 }
-
-
 
 #education {
   flex:1;
