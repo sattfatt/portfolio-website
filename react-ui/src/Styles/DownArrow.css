@@ -2,13 +2,14 @@
     border-radius: 10px;
     transition: 0.25s ease;
     padding: 10px;
+    transform: scale(0.8);
 }
 
 @media (hover: hover) {
     .arrow:hover {
         background: rgb(128, 128, 128);
         transition: 0.25s ease;
-        transform: scale(1.2);
+        transform: scale(1);
     }
 }
 
