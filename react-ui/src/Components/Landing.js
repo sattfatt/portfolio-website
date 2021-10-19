@@ -2,14 +2,14 @@ import GdImage from "./GDriveImage";
 import Lotus from "./Lotus";
 import "../Styles/Landing.css";
 import DownArrow from "./DownArrow";
-import cubes from './FancyCubes.mp4'
+import cubes from '../Videos/FancyCubes.mp4'
 
 function Landing() {
 
     return (
         <>
             <div className="background-video-landing">
-                <video className="fancy-cubes" src={cubes} type="video/mp4" autoPlay loop muted></video>
+                <video className="fancy-cubes" src={cubes} type="video/mp4" autoPlay loop muted playsInline ></video>
             </div>
             <div className="full-page-view">
 

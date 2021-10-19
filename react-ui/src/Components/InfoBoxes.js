@@ -3,14 +3,14 @@ import TextBox from "./TextBox";
 import Skills from "./Skills"
 import Video from "./Video";
 import GdImageBackground from "./GDriveImage";
-import {VscGithubInverted as Git} from "react-icons/vsc"
+import { VscGithubInverted as Git } from "react-icons/vsc"
 import Github from "./Github";
 import GdImage from "./GDriveImage";
 
 function InfoBoxes() {
 
     const skills = {
-        Programming: ['Python', 'C', 'C#', 'C++', 'MATLAB', 'Nodejs', 'React', 'MongoDB', 'Express', 'Javascript', 'HTML', 'CSS', 'REST', 'MASM'],
+        Programming: ['Python', 'C', 'C#', 'C++', 'MATLAB', 'Nodejs', 'React', 'MongoDB', 'Express', 'Javascript', 'HTML', 'CSS', 'REST', 'MASM', 'OpenGL', 'Linux', 'WSL'],
         Electrical: ['System Verilog', 'Arduino', 'Psim', 'LTSpice', 'PSpice', 'Signals & Systems', 'ESP32', 'CAD', 'Raspberry Pi'],
         GameDev: ['Unity', 'Blender', 'Finale', 'Photoshop', 'Gimp', 'Ableton', 'Powerpoint', 'Figma'],
         Concepts: ['OOP', 'MVC', 'Usability', 'Graphs', 'BST', 'Data Structures'],
@@ -47,7 +47,7 @@ function InfoBoxes() {
                             An interactive virtual classroom environment built in the Unity game engine. Features 3D graphing, chat interaction, and more!
                             <Skills unique="third-eye-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
                         </div>
-                        <GdImageBackground url="https://i.imgur.com/0ItBHhB.png" type="background" z={-1}/>
+                        <GdImageBackground url="https://i.imgur.com/0ItBHhB.png" type="background" z={-1} />
                         <div className="flex-row">
                             <div className="feature-list-container">
                                 Features:
@@ -67,6 +67,20 @@ function InfoBoxes() {
                         </div>
 
                     </Expandable>
+                    <Expandable title="Function Visualizer" classes="scrollable">
+                        <div>
+                            This is a fun little function visualizer. It features R2 to R map with a gradient direction on the input. It also has a contour plotter. (Still trying to make the contour plotter faster)
+                            <Skills unique="ai-skills" mini skills={{ Programming: ['Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
+                        </div>
+
+                        <article>This app was used at Oklahoma State University for Calculus 3:&nbsp;
+                            <a href="https://sattfatt.github.io/simple-function-visualizer/" target="_blank" rel="noopener noreferrer">React App</a>
+                        </article>
+
+
+
+                        <Github linkTo="https://github.com/sattfatt/simple-function-visualizer"></Github>
+                    </Expandable>
                     <Expandable title="This Website" classes="scrollable" _ref="2">
                         <div className="project-description">
                             This website is also one of my projects! I built it using the React framework and handled all the animations and overlays myself using jsx.
@@ -76,9 +90,12 @@ function InfoBoxes() {
                     </Expandable>
                     <Expandable title="LightBox" classes="scrollable" _ref="3">
                         <div>
-                            A 3D printed box that lights things up on top of it. Features fully remote control via web api and udp communication.
+                            A 3D printed box that lights things up on top of it. Features fully remote control via web api Twitch chat irc, and udp communication.
                             <Skills unique="lightbox-skills" mini skills={{ Electrical: ['Raspberry Pi', 'ESP32', 'Arduino'], Programming: ['C', 'C#'] }}></Skills>
                         </div>
+                        <span>Twitch chat bot: <Github linkTo="https://github.com/sattfatt/networkledcontroller"></Github></span>
+                        <span>UDP Sender GUI:<Github linkTo="https://github.com/sattfatt/LightBox"></Github></span>
+
                     </Expandable>
                     <Expandable title="Exercise Tracker" classes="scrollable" _ref="4">
                         <div>
@@ -86,12 +103,12 @@ function InfoBoxes() {
                             <Skills unique="exercise-skills" mini skills={{ Programming: ['MongoDB', 'Express', 'Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
                         <article>
-                            This project was a final project for my web development class. 
+                            This project was a final project for my web development class.
                             The project taught me how important it is to separate concerns and the utility of creating RESTful web services for easy CRUD operations.
-                            It was cool to learn how you can integrate many different web services to create a more complex system. 
+                            It was cool to learn how you can integrate many different web services to create a more complex system.
                         </article>
                         <Github linkTo="https://github.com/sattfatt/exercise-tracker"></Github>
-                        
+
                     </Expandable>
                     <Expandable title="Bhimsen" classes="scrollable" _ref="5">
                         <div>
@@ -99,7 +116,7 @@ function InfoBoxes() {
                             <Skills unique="bhimsen-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
                         </div>
                         <article>
-                            This game is still in progress. I plan on finishing it someday as its more of a lifetime goal of mine. 
+                            This game is still in progress. I plan on finishing it someday as its more of a lifetime goal of mine.
                         </article>
                     </Expandable>
                     <Expandable title="Kuba Game" classes="scrollable">
@@ -124,14 +141,14 @@ function InfoBoxes() {
                             A 1v1 game that slowly reaches an optimal state. Each AI agent is controled via a FFNN and weights are updated using a genetic algorithm.
                             <Skills unique="ai-skills" mini skills={{ Programming: ["Python"] }}></Skills>
                         </div>
-                        
+
                         <article>This code is pretty old. I did this project mainly to learn how to code in python. Its definitly not the cleanest code I have written but its always nice to see where I started. In fact the code is so old that I dont even remember what dependencies are needed to run it :p</article>
 
                         <Github linkTo="https://github.com/sattfatt/Simple-AI/blob/master/pygame1/oneonone.py"></Github>
                     </Expandable>
                 </div>
             </TextBox>
-        
+
             <TextBox title="Art">
                 <div className="flex-row-boxes">
                     <GdImage url="https://i.imgur.com/JXgJDzX.png"></GdImage>
