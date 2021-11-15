@@ -42,7 +42,6 @@ function InfoBoxes() {
             <TextBox title="Projects">
                 <div className="flex-row-boxes">
                     <Expandable title="The Third Eye" classes="scrollable" _ref="1">
-
                         <div className="project-description">
                             An interactive virtual classroom environment built in the Unity game engine. Features 3D graphing, chat interaction, and more!
                             <Skills unique="third-eye-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
@@ -65,7 +64,6 @@ function InfoBoxes() {
                                 <iframe className="aspect-content" src='https://www.youtube.com/embed/3SglaCG5mlE?start=3360&end=3390' frameBorder='0' allowFullScreen></iframe>
                             </Video>
                         </div>
-
                     </Expandable>
                     <Expandable title="Function Visualizer" classes="scrollable">
                         <div>
@@ -76,9 +74,6 @@ function InfoBoxes() {
                         <article>This app was used at Oklahoma State University for Calculus 3:&nbsp;
                             <a href="https://sattfatt.github.io/simple-function-visualizer/" target="_blank" rel="noopener noreferrer">React App</a>
                         </article>
-
-
-
                         <Github linkTo="https://github.com/sattfatt/simple-function-visualizer"></Github>
                     </Expandable>
                     <Expandable title="This Website" classes="scrollable" _ref="2">
@@ -96,6 +91,17 @@ function InfoBoxes() {
                         <span>Twitch chat bot: <Github linkTo="https://github.com/sattfatt/networkledcontroller"></Github></span>
                         <span>UDP Sender GUI:<Github linkTo="https://github.com/sattfatt/LightBox"></Github></span>
 
+                    </Expandable>
+                    <Expandable title="Mini Shell" classes="scrollable">
+                        <div className="project-description">
+                            This is a simple shell program for linux written in C. It features Input/Output redirection, background processes, native commands, and signal handling of SIGTSTOP and SIGINT.
+                            This was my portfolio project for my operating systems class. 
+                            <Skills unique="mini-shell-skills" mini skills={{ Programming: ['C']}}></Skills>
+                        </div>
+                        <article>
+                            I learned a lot about how processes are organised and handled in the linux operating system from this project. I learned about the fork and exec family of functions in C and how to handle different signals like SIGTSTOP and SIGINT
+                        </article>
+                        <Github linkTo="https://github.com/sattfatt/Minishell"></Github>
                     </Expandable>
                     <Expandable title="Exercise Tracker" classes="scrollable" _ref="4">
                         <div>
