@@ -3,7 +3,6 @@ import TextBox from "./TextBox";
 import Skills from "./Skills"
 import Video from "./Video";
 import GdImageBackground from "./GDriveImage";
-import { VscGithubInverted as Git } from "react-icons/vsc"
 import Github from "./Github";
 import GdImage from "./GDriveImage";
 
