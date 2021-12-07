@@ -5,6 +5,9 @@ import Video from "./Video";
 import GdImageBackground from "./GDriveImage";
 import Github from "./Github";
 import GdImage from "./GDriveImage";
+import Image from "./Image";
+import bhimsen_screenshot from "../Videos/screenshot.png";
+import asteroid_screenshot from "../Videos/Screen1.png"
 
 function InfoBoxes() {
 
@@ -46,6 +49,7 @@ function InfoBoxes() {
                             <Skills unique="third-eye-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
                         </div>
                         <GdImageBackground url="https://i.imgur.com/0ItBHhB.png" type="background" z={-1} />
+                        This app was used at Oklahoma State University for Calculus III During the peak of the COVID pandemic. <br/> 
                         <div className="flex-row">
                             <div className="feature-list-container">
                                 Features:
@@ -61,6 +65,36 @@ function InfoBoxes() {
                             </div>
                             <Video>
                                 <iframe className="aspect-content" src='https://www.youtube.com/embed/3SglaCG5mlE?start=3360&end=3390' frameBorder='0' allowFullScreen></iframe>
+                            </Video>
+                        </div>
+                    </Expandable>
+                    <Expandable title="Bhimsen" classes="scrollable" _ref="2">
+                        <div>
+                            An indian classical rhythm game built in the Unity engine.
+                            <Skills unique="bhimsen-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
+                        </div>
+                        <Image type="background" path={bhimsen_screenshot} z={-1}></Image>
+                        <div>
+                            <article >
+                                This game is still in progress. I plan on finishing it someday as its more of a lifetime goal of mine. Here is a little demo vid:
+                            </article>
+                            <Video>
+                                    <iframe className="aspect-content" src="https://www.youtube.com/embed/tVJPZCSnHF4" frameBorder='0' allowFullScreen></iframe>
+                            </Video>
+                        </div>
+                    </Expandable>
+                    <Expandable title="Asteroids Game" classes="scrollable">
+                        <div>
+                            An asteroid game built from scratch using OpenGL. This was the final project for my Graphics class.
+                            <Skills unique="bhimsen-skills" mini skills={{ Programming: ['C++', 'OpenGL'], GameDev: ['Blender'] }}></Skills>
+                        </div>
+                        <Image type="background" path={asteroid_screenshot} z={-1}></Image>
+                        <div>
+                            <article >
+                                I made this from scratch (had some initial boilerplate from the class) using OpenGL. I had to learn how to implement shaders, input controls, obj files, vertex buffer objects, and much more. My understanding of c++ improved greatly with this project.
+                            </article>
+                            <Video>
+                                    <iframe className="aspect-content" src="https://www.youtube.com/embed/5d8kWWdQ3kY" frameBorder='0' allowFullScreen></iframe>
                             </Video>
                         </div>
                     </Expandable>
@@ -115,15 +149,7 @@ function InfoBoxes() {
                         <Github linkTo="https://github.com/sattfatt/exercise-tracker"></Github>
 
                     </Expandable>
-                    <Expandable title="Bhimsen" classes="scrollable" _ref="5">
-                        <div>
-                            An indian classical rhythm game built in the Unity engine.
-                            <Skills unique="bhimsen-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
-                        </div>
-                        <article>
-                            This game is still in progress. I plan on finishing it someday as its more of a lifetime goal of mine.
-                        </article>
-                    </Expandable>
+                    
                     <Expandable title="Kuba Game" classes="scrollable">
                         <div>
                             Implements the Kuba game in Python in the CLI. This was one of my portfolio projects for Intro to CS.
@@ -156,6 +182,7 @@ function InfoBoxes() {
 
             <TextBox title="Art">
                 <div className="flex-row-boxes">
+                    These were modeled, textured, rigged and rendered from scratch using blender. The two characters are my takes on characters from the Cradle book series by Will Wight.
                     <GdImage url="https://i.imgur.com/JXgJDzX.png"></GdImage>
                     <GdImage url="https://i.imgur.com/zx0n3bc.jpg"></GdImage>
                     <GdImage url="https://i.imgur.com/gIdj7T2.png"></GdImage>
