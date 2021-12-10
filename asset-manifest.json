@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.70711b2e.chunk.css",
-    "main.js": "/portfolio-website/static/js/main.aa1921f6.chunk.js",
-    "main.js.map": "/portfolio-website/static/js/main.aa1921f6.chunk.js.map",
+    "main.js": "/portfolio-website/static/js/main.317fbffc.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.317fbffc.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.6cd8246a.js",
     "runtime-main.js.map": "/portfolio-website/static/js/runtime-main.6cd8246a.js.map",
     "static/js/2.f37686f1.chunk.js": "/portfolio-website/static/js/2.f37686f1.chunk.js",
@@ -12,7 +12,6 @@
     "index.html": "/portfolio-website/index.html",
     "static/css/main.70711b2e.chunk.css.map": "/portfolio-website/static/css/main.70711b2e.chunk.css.map",
     "static/js/2.f37686f1.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.f37686f1.chunk.js.LICENSE.txt",
-    "static/media/Bhimsen.d560864a.mp4": "/portfolio-website/static/media/Bhimsen.d560864a.mp4",
     "static/media/FancyCubes.efc416ed.mp4": "/portfolio-website/static/media/FancyCubes.efc416ed.mp4",
     "static/media/Screen1.24e5c1e5.png": "/portfolio-website/static/media/Screen1.24e5c1e5.png",
     "static/media/logo.6ce24c58.svg": "/portfolio-website/static/media/logo.6ce24c58.svg",
@@ -22,6 +21,6 @@
     "static/js/runtime-main.6cd8246a.js",
     "static/js/2.f37686f1.chunk.js",
     "static/css/main.70711b2e.chunk.css",
-    "static/js/main.aa1921f6.chunk.js"
+    "static/js/main.317fbffc.chunk.js"
   ]
 }
