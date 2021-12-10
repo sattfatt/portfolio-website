@@ -83,10 +83,10 @@ function InfoBoxes() {
                             </Video>
                         </div>
                     </Expandable>
-                    <Expandable title="Asteroids Game" classes="scrollable">
+                    <Expandable title="Asteroids Game" classes="scrollable" _ref="3">
                         <div>
                             An asteroid game built from scratch using OpenGL. This was the final project for my Graphics class.
-                            <Skills unique="bhimsen-skills" mini skills={{ Programming: ['C++', 'OpenGL'], GameDev: ['Blender'] }}></Skills>
+                            <Skills unique="asteroids-game-skills" mini skills={{ Programming: ['C++', 'OpenGL'], GameDev: ['Blender'] }}></Skills>
                         </div>
                         <Image type="background" path={asteroid_screenshot} z={-1}></Image>
                         <div>
@@ -98,10 +98,10 @@ function InfoBoxes() {
                             </Video>
                         </div>
                     </Expandable>
-                    <Expandable title="Function Visualizer" classes="scrollable">
+                    <Expandable title="Function Visualizer" classes="scrollable" _ref="4">
                         <div>
                             This is a fun little function visualizer. It features R2 to R map with a gradient direction on the input. It also has a contour plotter. (Still trying to make the contour plotter faster)
-                            <Skills unique="ai-skills" mini skills={{ Programming: ['Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
+                            <Skills unique="function-skills" mini skills={{ Programming: ['Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
 
                         <article>This app was used at Oklahoma State University for Calculus 3:&nbsp;
@@ -109,14 +109,14 @@ function InfoBoxes() {
                         </article>
                         <Github linkTo="https://github.com/sattfatt/simple-function-visualizer"></Github>
                     </Expandable>
-                    <Expandable title="This Website" classes="scrollable" _ref="2">
+                    <Expandable title="This Website" classes="scrollable" _ref="5">
                         <div className="project-description">
                             This website is also one of my projects! I built it using the React framework and handled all the animations and overlays myself using jsx.
                             <Skills unique="website-skills" mini skills={{ Programming: ['Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
                         <Github linkTo="https://github.com/sattfatt/portfolio-website"></Github>
                     </Expandable>
-                    <Expandable title="LightBox" classes="scrollable" _ref="3">
+                    <Expandable title="LightBox" classes="scrollable" _ref="6">
                         <div>
                             A 3D printed box that lights things up on top of it. Features fully remote control via web api Twitch chat irc, and udp communication.
                             <Skills unique="lightbox-skills" mini skills={{ Electrical: ['Raspberry Pi', 'ESP32', 'Arduino'], Programming: ['C', 'C#'] }}></Skills>
@@ -125,7 +125,7 @@ function InfoBoxes() {
                         <span>UDP Sender GUI:<Github linkTo="https://github.com/sattfatt/LightBox"></Github></span>
 
                     </Expandable>
-                    <Expandable title="Mini Shell" classes="scrollable">
+                    <Expandable title="Mini Shell" classes="scrollable" _ref="7">
                         <div className="project-description">
                             This is a simple shell program for linux written in C. It features Input/Output redirection, background processes, native commands, and signal handling of SIGTSTOP and SIGINT.
                             This was my portfolio project for my operating systems class. 
@@ -136,7 +136,7 @@ function InfoBoxes() {
                         </article>
                         <Github linkTo="https://github.com/sattfatt/Minishell"></Github>
                     </Expandable>
-                    <Expandable title="Exercise Tracker" classes="scrollable" _ref="4">
+                    <Expandable title="Exercise Tracker" classes="scrollable" _ref="8">
                         <div>
                             A simple full-stack MERN application that allows the user to bookkeep their exercises. Features RESTful api and CRUD operations to a database.
                             <Skills unique="exercise-skills" mini skills={{ Programming: ['MongoDB', 'Express', 'Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
@@ -150,7 +150,7 @@ function InfoBoxes() {
 
                     </Expandable>
                     
-                    <Expandable title="Kuba Game" classes="scrollable">
+                    <Expandable title="Kuba Game" classes="scrollable" _ref="9">
                         <div>
                             Implements the Kuba game in Python in the CLI. This was one of my portfolio projects for Intro to CS.
                             <Skills unique="kuba-skills" mini skills={{ Programming: ["Python"] }}></Skills>
@@ -160,14 +160,14 @@ function InfoBoxes() {
                         </article>
                         <Github linkTo="https://github.com/sattfatt/kuba"></Github>
                     </Expandable>
-                    <Expandable title="Graphs" classes="scrollable">
+                    <Expandable title="Graphs" classes="scrollable" _ref="10">
                         <div>
                             Implements directed and undirected graphs in python. Each implementation has various traversal methods as well as common algorithms like loop detection and Djikstras algorithm.
                             <Skills unique="graphs-skills" mini skills={{ Programming: ["Python"] }}></Skills>
                         </div>
                         <Github linkTo="https://github.com/sattfatt/graph"></Github>
                     </Expandable>
-                    <Expandable title="Fun AI" classes="scrollable">
+                    <Expandable title="Fun AI" classes="scrollable" _ref="11">
                         <div>
                             A 1v1 game that slowly reaches an optimal state. Each AI agent is controled via a FFNN and weights are updated using a genetic algorithm.
                             <Skills unique="ai-skills" mini skills={{ Programming: ["Python"] }}></Skills>
