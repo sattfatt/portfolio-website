@@ -3,13 +3,14 @@ import Lotus from "./Lotus";
 import "../Styles/Landing.css";
 import DownArrow from "./DownArrow";
 import cubes from '../Videos/FancyCubes.mp4'
+import FancyCubes from "./FancyCubes";
 
 function Landing() {
 
     return (
         <>
             <div className="background-video-landing">
-                <video className="fancy-cubes" src={cubes} type="video/mp4" autoPlay loop muted playsInline ></video>
+                <FancyCubes></FancyCubes>
             </div>
             <div className="full-page-view">
 

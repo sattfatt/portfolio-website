@@ -11,14 +11,32 @@ function Skill(props) {
     )
 }
 
+function buildThresholdList(numSteps) {
+    let thresholds = [];
+  
+    for (let i=1.0; i<=numSteps; i++) {
+      let ratio = i/numSteps;
+      thresholds.push(ratio);
+    }
+  
+    thresholds.push(0);
+    return thresholds;
+  }
+  
+
 function Skills(props) {
     const all_skills = useRef(null);
     const skill_row = useRef(null);
-    useOnScreen(all_skills, props.unique);
+
+    let options = {
+        rootMargin: '0px',
+        threshold: buildThresholdList(100)
+      }
+    useOnScreen(all_skills, props.unique, options);
     const [className, setClassName] = useState("flex-row wave-parent")
 
     useEffect(_ => {
-        const onIntersect = e => e.detail?setClassName("flex-row wave-parent"):setClassName("flex-row")
+        const onIntersect = e => e.detail==true?setClassName("flex-row wave-parent"):setClassName("hide flex-row")
         on(props.unique, onIntersect);
         return _ => {off(props.unique, onIntersect)};
     }, []);

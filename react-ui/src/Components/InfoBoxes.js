@@ -183,11 +183,11 @@ function InfoBoxes() {
             <TextBox title="Art">
                 <div className="flex-row-boxes">
                     These were modeled, textured, rigged and rendered from scratch using blender. The two characters are my takes on characters from the Cradle book series by Will Wight.
-                    <GdImage url="https://i.imgur.com/JXgJDzX.png"></GdImage>
-                    <GdImage url="https://i.imgur.com/zx0n3bc.jpg"></GdImage>
-                    <GdImage url="https://i.imgur.com/gIdj7T2.png"></GdImage>
-                    <GdImage url="https://i.imgur.com/ntcJUoG.png"></GdImage>
-                    <GdImage url="https://i.imgur.com/rnqBdJe.gif"></GdImage>
+                    <GdImage linkTo unique="art-0" url="https://i.imgur.com/JXgJDzX.png"></GdImage>
+                    <GdImage linkTo unique="art-1" url="https://i.imgur.com/zx0n3bc.jpg"></GdImage>
+                    <GdImage linkTo unique="art-2" url="https://i.imgur.com/gIdj7T2.png"></GdImage>
+                    <GdImage linkTo unique="art-3" url="https://i.imgur.com/ntcJUoG.png"></GdImage>
+                    <GdImage linkTo unique="art-4" url="https://i.imgur.com/rnqBdJe.gif"></GdImage>
                 </div>
             </TextBox>
         </div>
