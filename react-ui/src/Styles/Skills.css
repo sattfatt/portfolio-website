@@ -3,10 +3,10 @@
     padding: 0.2em 0.8em;
     border-radius: 100px;
     color: rgb(75, 75, 75);
-    font-weight: 300;
+    font-weight: 500;
     font-size: 0.9em;
-    background-color:rgba(65, 65, 65, 0);
-    color: white;
+    background-color:rgba(64, 79, 92, 0.349);
+    color: rgba(255, 255, 255, 0.637);
     border: 2px solid;
   }
 
