@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.a2d3fec8.chunk.css",
+    "main.css": "/portfolio-website/static/css/main.7dda34a0.chunk.css",
     "main.js": "/portfolio-website/static/js/main.c73f380b.chunk.js",
     "main.js.map": "/portfolio-website/static/js/main.c73f380b.chunk.js.map",
     "runtime-main.js": "/portfolio-website/static/js/runtime-main.6cd8246a.js",
@@ -10,7 +10,7 @@
     "static/js/3.ce9bb429.chunk.js": "/portfolio-website/static/js/3.ce9bb429.chunk.js",
     "static/js/3.ce9bb429.chunk.js.map": "/portfolio-website/static/js/3.ce9bb429.chunk.js.map",
     "index.html": "/portfolio-website/index.html",
-    "static/css/main.a2d3fec8.chunk.css.map": "/portfolio-website/static/css/main.a2d3fec8.chunk.css.map",
+    "static/css/main.7dda34a0.chunk.css.map": "/portfolio-website/static/css/main.7dda34a0.chunk.css.map",
     "static/js/2.bae397a8.chunk.js.LICENSE.txt": "/portfolio-website/static/js/2.bae397a8.chunk.js.LICENSE.txt",
     "static/media/FancyCubes.efc416ed.mp4": "/portfolio-website/static/media/FancyCubes.efc416ed.mp4",
     "static/media/Screen1.24e5c1e5.png": "/portfolio-website/static/media/Screen1.24e5c1e5.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.6cd8246a.js",
     "static/js/2.bae397a8.chunk.js",
-    "static/css/main.a2d3fec8.chunk.css",
+    "static/css/main.7dda34a0.chunk.css",
     "static/js/main.c73f380b.chunk.js"
   ]
 }
