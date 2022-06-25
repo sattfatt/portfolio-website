@@ -4,15 +4,25 @@ import Skills from "./Skills"
 import Video from "./Video";
 import GdImageBackground from "./GDriveImage";
 import Github from "./Github";
-import GdImage from "./GDriveImage";
+import HostedImage from "./GDriveImage";
 import Image from "./Image";
 import bhimsen_screenshot from "../Videos/screenshot.png";
 import asteroid_screenshot from "../Videos/Screen1.png"
 
+var iota = 0
+function Iota() {
+    return iota++
+}
+
 function InfoBoxes() {
 
+    const label = {
+        Personal: "Personal",
+        Work: "Work"
+    }
+
     const skills = {
-        Programming: ['Python', 'C', 'C#', 'C++', 'MATLAB', 'Nodejs', 'React', 'MongoDB', 'Express', 'Javascript', 'HTML', 'CSS', 'REST', 'MASM', 'OpenGL', 'Linux', 'WSL'],
+        Programming: ['Vue.js','GCP','Go','Python', 'C', 'C#', 'C++', 'MATLAB', 'Nodejs', 'React', 'MongoDB', 'Express', 'Javascript', 'HTML', 'CSS', 'REST', 'MASM', 'OpenGL', 'Linux', 'WSL'],
         Electrical: ['System Verilog', 'Arduino', 'Psim', 'LTSpice', 'PSpice', 'Signals & Systems', 'ESP32', 'CAD', 'Raspberry Pi'],
         GameDev: ['Unity', 'Blender', 'Finale', 'Photoshop', 'Gimp', 'Ableton', 'Powerpoint', 'Figma'],
         Concepts: ['OOP', 'MVC', 'Usability', 'Graphs', 'BST', 'Data Structures'],
@@ -29,13 +39,27 @@ function InfoBoxes() {
 
             <div className="flex-row-boxes">
                 <Skills unique="main-skills" title="Skills" skills={skills} id="skills" />
+
                 <TextBox title="Education" _id="education">
                     <div className="flex-col-boxes">
                         <TextBox title="B.S. Electrical Engineering" _id="edu">
                             UCSD, April 2018
                         </TextBox>
                         <TextBox title="B.S. Computer Science" _id="edu">
-                            Oregon State University, Summer 2022
+                            Oregon State University, December 2022
+                        </TextBox>
+                    </div>
+                </TextBox>
+                <TextBox title="Work" _id="work">
+                    <div className="flex-col-boxes">
+                        <TextBox title="Engineering Aide" _id="work">
+                            Scripps Institute of Oceanography, 2014-2017
+                        </TextBox>
+                        <TextBox title="Online Instructor" _id="work">
+                            idTech, 2021
+                        </TextBox>
+                        <TextBox label="Current" title="Software Intern" _id="work">
+                            Rockbot, 2022
                         </TextBox>
                     </div>
                 </TextBox>
@@ -43,7 +67,7 @@ function InfoBoxes() {
 
             <TextBox title="Projects">
                 <div className="flex-row-boxes">
-                    <Expandable title="The Third Eye" classes="scrollable" _ref="1">
+                    <Expandable label={label.Personal} title="The Third Eye" classes="scrollable" _ref={Iota()}>
                         <div className="project-description">
                             An interactive virtual classroom environment built in the Unity game engine. Features 3D graphing, chat interaction, and more!
                             <Skills unique="third-eye-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
@@ -68,7 +92,7 @@ function InfoBoxes() {
                             </Video>
                         </div>
                     </Expandable>
-                    <Expandable title="Bhimsen" classes="scrollable" _ref="2">
+                    <Expandable label={label.Personal} title="Bhimsen" classes="scrollable" _ref={Iota()}>
                         <div>
                             An indian classical rhythm game built in the Unity engine.
                             <Skills unique="bhimsen-skills" mini skills={{ GameDev: ['Unity', 'Blender', 'Photoshop'], Programming: ['C#'] }}></Skills>
@@ -83,7 +107,7 @@ function InfoBoxes() {
                             </Video>
                         </div>
                     </Expandable>
-                    <Expandable title="Asteroids Game" classes="scrollable" _ref="3">
+                    <Expandable label={label.Personal} title="Asteroids Game" classes="scrollable" _ref={Iota()}>
                         <div>
                             An asteroid game built from scratch using OpenGL. This was the final project for my Graphics class.
                             <Skills unique="asteroids-game-skills" mini skills={{ Programming: ['C++', 'OpenGL'], GameDev: ['Blender'] }}></Skills>
@@ -98,7 +122,19 @@ function InfoBoxes() {
                             </Video>
                         </div>
                     </Expandable>
-                    <Expandable title="Function Visualizer" classes="scrollable" _ref="4">
+                    <Expandable label={label.Work} title="Auto API Documentation" classes="scrollable" _ref={Iota()}>
+                        <div>
+                            An automatic swagger documentation generation system that analyzes Rockbot's backend and generates OpenAPI spec documentation.
+                            <Skills unique="api-docs-skills" mini skills={{Programming: ['Go', 'GCP', 'OpenAPI']}}></Skills>
+                        </div>
+                    </Expandable>
+                    <Expandable label={label.Work} title="GCP Trace System" classes="scrollable" _ref={Iota()}>
+                        <div>
+                            Implemented OpenTelemetry tracing instrumentation in Go backend.
+                            <Skills unique="opentelemetry-skills" mini skills={{Programming: ['Go', 'GCP', 'OpenTelemetry']}}></Skills>
+                        </div>
+                    </Expandable>
+                    <Expandable label={label.Personal} title="Function Visualizer" classes="scrollable" _ref={Iota()}>
                         <div>
                             This is a fun little function visualizer. It features R2 to R map with a gradient direction on the input. It also has a contour plotter. (Still trying to make the contour plotter faster)
                             <Skills unique="function-skills" mini skills={{ Programming: ['Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
@@ -109,14 +145,14 @@ function InfoBoxes() {
                         </article>
                         <Github linkTo="https://github.com/sattfatt/simple-function-visualizer"></Github>
                     </Expandable>
-                    <Expandable title="This Website" classes="scrollable" _ref="5">
+                    <Expandable label={label.Personal} title="This Website" classes="scrollable" _ref={Iota()}>
                         <div className="project-description">
                             This website is also one of my projects! I built it using the React framework and handled all the animations and overlays myself using jsx.
                             <Skills unique="website-skills" mini skills={{ Programming: ['Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
                         </div>
                         <Github linkTo="https://github.com/sattfatt/portfolio-website"></Github>
                     </Expandable>
-                    <Expandable title="LightBox" classes="scrollable" _ref="6">
+                    <Expandable label={label.Personal} title="LightBox" classes="scrollable" _ref={Iota()}>
                         <div>
                             A 3D printed box that lights things up on top of it. Features fully remote control via web api Twitch chat irc, and udp communication.
                             <Skills unique="lightbox-skills" mini skills={{ Electrical: ['Raspberry Pi', 'ESP32', 'Arduino'], Programming: ['C', 'C#'] }}></Skills>
@@ -125,7 +161,7 @@ function InfoBoxes() {
                         <span>UDP Sender GUI:<Github linkTo="https://github.com/sattfatt/LightBox"></Github></span>
 
                     </Expandable>
-                    <Expandable title="Mini Shell" classes="scrollable" _ref="7">
+                    <Expandable label={label.Personal} title="Mini Shell" classes="scrollable" _ref={Iota()}>
                         <div className="project-description">
                             This is a simple shell program for linux written in C. It features Input/Output redirection, background processes, native commands, and signal handling of SIGTSTOP and SIGINT.
                             This was my portfolio project for my operating systems class. 
@@ -136,7 +172,7 @@ function InfoBoxes() {
                         </article>
                         <Github linkTo="https://github.com/sattfatt/Minishell"></Github>
                     </Expandable>
-                    <Expandable title="Exercise Tracker" classes="scrollable" _ref="8">
+                    <Expandable label={label.Personal} title="Exercise Tracker" classes="scrollable" _ref={Iota()}>
                         <div>
                             A simple full-stack MERN application that allows the user to bookkeep their exercises. Features RESTful api and CRUD operations to a database.
                             <Skills unique="exercise-skills" mini skills={{ Programming: ['MongoDB', 'Express', 'Nodejs', 'React', 'Javascript', 'HTML', 'CSS'] }}></Skills>
@@ -149,8 +185,7 @@ function InfoBoxes() {
                         <Github linkTo="https://github.com/sattfatt/exercise-tracker"></Github>
 
                     </Expandable>
-                    
-                    <Expandable title="Kuba Game" classes="scrollable" _ref="9">
+                    <Expandable label={label.Personal} title="Kuba Game" classes="scrollable" _ref={Iota()}>
                         <div>
                             Implements the Kuba game in Python in the CLI. This was one of my portfolio projects for Intro to CS.
                             <Skills unique="kuba-skills" mini skills={{ Programming: ["Python"] }}></Skills>
@@ -160,14 +195,14 @@ function InfoBoxes() {
                         </article>
                         <Github linkTo="https://github.com/sattfatt/kuba"></Github>
                     </Expandable>
-                    <Expandable title="Graphs" classes="scrollable" _ref="10">
+                    <Expandable label={label.Personal} title="Graphs" classes="scrollable" _ref={Iota()}>
                         <div>
                             Implements directed and undirected graphs in python. Each implementation has various traversal methods as well as common algorithms like loop detection and Djikstras algorithm.
                             <Skills unique="graphs-skills" mini skills={{ Programming: ["Python"] }}></Skills>
                         </div>
                         <Github linkTo="https://github.com/sattfatt/graph"></Github>
                     </Expandable>
-                    <Expandable title="Fun AI" classes="scrollable" _ref="11">
+                    <Expandable label={label.Personal} title="Fun AI" classes="scrollable" _ref={Iota()}>
                         <div>
                             A 1v1 game that slowly reaches an optimal state. Each AI agent is controled via a FFNN and weights are updated using a genetic algorithm.
                             <Skills unique="ai-skills" mini skills={{ Programming: ["Python"] }}></Skills>
@@ -183,11 +218,12 @@ function InfoBoxes() {
             <TextBox title="Art">
                 <div className="flex-row-boxes">
                     These were modeled, textured, rigged and rendered from scratch using blender. The two characters are my takes on characters from the Cradle book series by Will Wight.
-                    <GdImage linkTo unique="art-0" url="https://i.imgur.com/JXgJDzX.png"></GdImage>
-                    <GdImage linkTo unique="art-1" url="https://i.imgur.com/zx0n3bc.jpg"></GdImage>
-                    <GdImage linkTo unique="art-2" url="https://i.imgur.com/gIdj7T2.png"></GdImage>
-                    <GdImage linkTo unique="art-3" url="https://i.imgur.com/ntcJUoG.png"></GdImage>
-                    <GdImage linkTo unique="art-4" url="https://i.imgur.com/rnqBdJe.gif"></GdImage>
+                    <HostedImage linkTo unique="art-5" url="https://i.imgur.com/MUnARAJ.jpg"></HostedImage>
+                    <HostedImage linkTo unique="art-0" url="https://i.imgur.com/JXgJDzX.png"></HostedImage>
+                    <HostedImage linkTo unique="art-1" url="https://i.imgur.com/zx0n3bc.jpg"></HostedImage>
+                    <HostedImage linkTo unique="art-2" url="https://i.imgur.com/gIdj7T2.png"></HostedImage>
+                    <HostedImage linkTo unique="art-3" url="https://i.imgur.com/ntcJUoG.png"></HostedImage>
+                    <HostedImage linkTo unique="art-4" url="https://i.imgur.com/rnqBdJe.gif"></HostedImage>
                 </div>
             </TextBox>
         </div>

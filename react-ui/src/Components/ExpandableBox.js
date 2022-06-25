@@ -75,12 +75,12 @@ function Expandable(props) {
         <VidRefreshContext.Provider value={delayedToggle}>
             <div className="expandable-container">
                 <div className={"scroll-clip-overlay-"+oToggle} style={overlayStyle}>
-                    <TextBox title={props.title} _id={props._id} classes={props.classes} >
+                    <TextBox label={props.label} title={props.title} _id={props._id} classes={props.classes} >
                         {props.children}
                     </TextBox>
                 </div>
                 <div className="scroll-clip noselect">
-                    <TextBox title={props.title} _id={props._id} classes={props.classes} _onClick={onClick}>
+                    <TextBox label={props.label} title={props.title} _id={props._id} classes={props.classes} _onClick={onClick}>
                         {props.children[0] ? props.children[0] : props.children}
                     </TextBox>
                 </div>

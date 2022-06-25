@@ -26,7 +26,7 @@ function buildThresholdList(numSteps) {
   return thresholds;
 }
 
-function GdImage(props) {
+function HostedImage(props) {
 
     const div_ref = useRef(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -65,4 +65,4 @@ function GdImage(props) {
     )
 }
 
-export default GdImage;
+export default HostedImage;

@@ -3,7 +3,7 @@ import './App.css';
 import Landing from './Components/Landing';
 import InfoBoxes from './Components/InfoBoxes';
 import { trigger } from './Utilities/Events';
-import GdImage from './Components/GDriveImage';
+import HostedImage from './Components/GDriveImage';
 
 function App() {
 
