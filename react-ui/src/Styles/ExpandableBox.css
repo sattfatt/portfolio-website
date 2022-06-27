@@ -57,7 +57,7 @@
 }
 
 .scroll-clip:active {
-    
+
     transform: scale(0.98);
     transition: 0.1s ease;
 }
@@ -102,9 +102,9 @@
 
 .noselect {
     -webkit-touch-callout: none;
-      -webkit-user-select: none;
-       -khtml-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-  }
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

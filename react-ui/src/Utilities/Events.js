@@ -24,6 +24,7 @@ function off(eventType, handler) {
  */
 function once(eventType, handler) {
     on(eventType, handleOnce);
+
     function handleOnce(event) {
         handler(event);
         off(eventType, handleOnce);
@@ -36,12 +37,12 @@ function once(eventType, handler) {
  * @param {any} data Any data that you want the handler to process from the source.
  */
 function trigger(eventType, data) {
-    const event = new CustomEvent(eventType, {detail:data});
+    const event = new CustomEvent(eventType, {detail: data});
     document.dispatchEvent(event);
 }
 
 async function triggerAsync(eventType, data) {
-    const event = new CustomEvent(eventType, {detail:data});
+    const event = new CustomEvent(eventType, {detail: data});
     document.dispatchEvent(event);
 }
 

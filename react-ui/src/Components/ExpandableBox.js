@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import TextBox from "./TextBox";
 import VidRefreshContext from "../Contexts/VideoRefreshContext";
 import "../Styles/ExpandableBox.css";
@@ -8,36 +8,36 @@ function sleep(ms) {
 }
 
 function Expandable(props) {
-    const [overlayStyle, setOverlayStyle] = useState({position:"fixed"})
+    const [overlayStyle, setOverlayStyle] = useState({position: "fixed"})
     const [oToggle, setOtoggle] = useState("off")
     const [delayedToggle, setDelayedToggle] = useState(false);
 
     const moveToCenter = () => {
         const rect = {
-            top:"50%", 
-            left:"50%", 
-            transform:"translate(-50%, -50%)", 
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
             maxWidth: "90vw",
-            maxHeight:"90vh",
-            minWidth: "70vw", 
-            transition:"0.5s ease", 
-            position:"fixed"
-        } 
+            maxHeight: "90vh",
+            minWidth: "70vw",
+            transition: "0.5s ease",
+            position: "fixed"
+        }
         setOverlayStyle(rect);
         return rect;
     }
 
     const moveToFirst = async () => {
         setOverlayStyle({
-            top:"50%", left:"50%", 
-            transform:"translate(-50%, -55%)", 
+            top: "50%", left: "50%",
+            transform: "translate(-50%, -55%)",
             maxWidth: "90vw",
-            maxHeight:"90vh",
-            minWidth: "70vw",  
-            transition:"none", 
-            position:"fixed", 
-            visibility:"hidden", 
-            opacity:0
+            maxHeight: "90vh",
+            minWidth: "70vw",
+            transition: "none",
+            position: "fixed",
+            visibility: "hidden",
+            opacity: 0
         });
         await sleep(100);
     }
@@ -47,21 +47,22 @@ function Expandable(props) {
     }
 
     const onClick = (e) => {
-        if (oToggle === "off") {          
+        if (oToggle === "off") {
             setOtoggle("on");
             moveToFirst().then(moveToCenter)
             setDelayedToggle(true);
-        }
-        else {
+        } else {
             setOtoggle("off");
-            delay(400).then(()=>{setDelayedToggle(false)});
+            delay(400).then(() => {
+                setDelayedToggle(false)
+            });
         }
-        
+
     }
 
     useEffect(() => {
-        const handleWindowChange = (e) => {          
-            if (oToggle==="on") {
+        const handleWindowChange = (e) => {
+            if (oToggle === "on") {
                 moveToCenter();
             }
         }
@@ -70,26 +71,26 @@ function Expandable(props) {
             window.removeEventListener('resize', handleWindowChange);
         }
     });
-
     return (
         <VidRefreshContext.Provider value={delayedToggle}>
             <div className="expandable-container">
-                <div className={"scroll-clip-overlay-"+oToggle} style={overlayStyle}>
-                    <TextBox label={props.label} title={props.title} _id={props._id} classes={props.classes} >
+                <div className={"scroll-clip-overlay-" + oToggle} style={overlayStyle}>
+                    <TextBox label={props.label} title={props.title} _id={props._id} classes={props.classes}>
                         {props.children}
                     </TextBox>
                 </div>
                 <div className="scroll-clip noselect">
-                    <TextBox label={props.label} title={props.title} _id={props._id} classes={props.classes} _onClick={onClick}>
+                    <TextBox label={props.label} title={props.title} _id={props._id} classes={props.classes}
+                             _onClick={onClick}>
                         {props.children[0] ? props.children[0] : props.children}
                     </TextBox>
                 </div>
-                <div className={"back-blur-"+oToggle} onClick={onClick}>
+                <div className={"back-blur-" + oToggle} onClick={onClick}>
 
                 </div>
             </div>
         </VidRefreshContext.Provider>
-        
+
     );
 }
 

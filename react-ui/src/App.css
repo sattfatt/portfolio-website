@@ -1,113 +1,111 @@
 :root {
-  --gray-1: #535353;
-  --gray-2: #161e25;
-  --blue-1: rgba(99, 208, 255, 1);
-  --red-1: rgb(255, 58, 58);
-  --orange-1: rgb(255, 128, 44);
-  --green-1: rgb(19, 233, 0);
-  --box-background-color: rgba(15, 24, 31, 0.452);
-  --overlay-color: rgba(36, 46, 61, 0.842);
-  --overlay-background-color: rgba(62, 69, 82, 0.829);
-  --border-radius: 10px;
-  --border-color: rgb(45, 60, 90);
-  --gradient-1: linear-gradient(var(--gray-1), var(--gray-2));
-  
+    --gray-1: #535353;
+    --gray-2: #161e25;
+    --blue-1: rgba(99, 208, 255, 1);
+    --red-1: rgb(255, 58, 58);
+    --orange-1: rgb(255, 128, 44);
+    --green-1: rgb(19, 233, 0);
+    --box-background-color: rgba(15, 24, 31, 0.452);
+    --overlay-color: rgba(36, 46, 61, 0.842);
+    --overlay-background-color: rgba(62, 69, 82, 0.829);
+    --border-radius: 10px;
+    --border-color: rgb(45, 60, 90);
+    --gradient-1: linear-gradient(var(--gray-1), var(--gray-2));
 }
 
 body {
-  overflow:hidden;
+    overflow: hidden;
 }
 
 a {
-  color: var(--blue-1);
+    color: var(--blue-1);
 }
 
 .App {
-  text-align: center;
-  font-family: 'Work Sans', sans-serif;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 100vh;
-  scrollbar-color: var(--blue-1) var(--gradient-1);
-  scrollbar-width: thin;
-  background: var(--gradient-1);
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    scrollbar-color: var(--blue-1) var(--gradient-1);
+    scrollbar-width: thin;
+    background: var(--gradient-1);
 }
 
 .App-header {
-  font-size: clamp(15px, calc(8px + 1.1vw), 20px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
+    font-size: clamp(15px, calc(8px + 1.1vw), 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
-
 
 
 .info-box {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content:center;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 100px;
 }
 
 h1 {
-  font-weight: 200;
+    font-weight: 200;
 }
 
 em {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
 }
 
 .flex-row-boxes {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .flex-col-boxes {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: left;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: left;
 }
 
 .flex-row-lotus {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .lotus {
-  transform: scale(1.5);
+    transform: scale(1.5);
 }
 
 .App::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background-color: transparent;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
 }
 
 .App::-webkit-scrollbar-thumb {
-  background-color: var(--blue-1);
-  color:var(--blue-1);
-  border-radius: var(--border-radius);
+    background-color: var(--blue-1);
+    color: var(--blue-1);
+    border-radius: var(--border-radius);
 }
 
 #education {
-  flex:1;
+    flex: 1;
 }

@@ -5,72 +5,73 @@
     color: rgb(75, 75, 75);
     font-weight: 500;
     font-size: 0.9em;
-    background-color:rgba(64, 79, 92, 0.349);
+    background-color: rgba(64, 79, 92, 0.349);
     color: rgba(255, 255, 255, 0.637);
     border: 2px solid;
-  }
+}
 
-  .mini-container {
+.mini-container {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-  }
+}
 
-  .mini-container>div>span {
+.mini-container > div > span {
     font-size: 0.7em;
     padding: 0.2em 0.9em;
 
-  }
-  
-  #skills {
+}
+
+#skills {
     min-width: 200px;
-    flex:2;
-  }
-  #Programming {
+    flex: 2;
+}
+
+#Programming {
     border-color: var(--blue-1);
-  }
-  
-  #Electrical {
+}
+
+#Electrical {
     border-color: var(--green-1);
-  }
-  
-  #GameDev {
+}
+
+#GameDev {
     border-color: var(--red-1);
-  }
-  
-  #Misc {
-    border-color:var(--orange-1);
-  }
-  
-  #Concepts {
+}
+
+#Misc {
+    border-color: var(--orange-1);
+}
+
+#Concepts {
     border-color: rgb(162, 0, 255);
-  }
+}
 
-  .hide {
+.hide {
     opacity: 0;
-  }
+}
 
-  .wave-parent>span {
+.wave-parent > span {
     opacity: 0.01;
     transform: scale(0);
     animation: wave 0.5s ease-in-out 1 forwards;
     animation-delay: calc(var(--index) * 0.75ms);
-  }
+}
 
-  @keyframes wave {
-  
+@keyframes wave {
+
     0% {
-      opacity: 0;
-      transform: scale(0);
+        opacity: 0;
+        transform: scale(0);
     }
 
     70% {
-      opacity: 0.7;
-      transform: scale(1.05);
+        opacity: 0.7;
+        transform: scale(1.05);
     }
-  
+
     100% {
-      opacity: 1;
-      transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
-  }
+}

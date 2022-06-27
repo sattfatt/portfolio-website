@@ -6,7 +6,7 @@ function Video(props) {
         <VidRefreshContext.Consumer>
             {
                 (data) => {
-                    if (data){
+                    if (data) {
                         return (
                             <div className="video-container">
                                 <div className="aspect-container">
@@ -15,7 +15,7 @@ function Video(props) {
                             </div>
                         )
                     }
-                    return(<div></div>)
+                    return (<div></div>)
                 }
             }
         </VidRefreshContext.Consumer>

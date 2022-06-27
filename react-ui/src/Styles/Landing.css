@@ -2,37 +2,39 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content:center;
+    justify-content: center;
     height: 100vh;
     width: 85vw;
     min-height: 250px;
-  }
+}
 
-  .flex-row-lotus {
+.flex-row-lotus {
     margin-top: auto;
-  }
+}
 
-  .down-arrow{
+.down-arrow {
     margin-top: auto;
     margin-bottom: 50px;
-  }
-  .ontop {
+}
+
+.ontop {
     z-index: 5;
-  }
-  .fancy-cubes {
-    position:absolute;
-    top:0;
-    left:0;
-    transform: translate(-50%,0px);
+}
+
+.fancy-cubes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, 0px);
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     mask-image: linear-gradient(to top, transparent 1%, black 20%) linear-gradient(to top, transparent 1%, black 20%);
     -webkit-mask-image: linear-gradient(to top, transparent 2%, black 100%);
     z-index: 0;
-  }
+}
 
 .background-video-landing {
-  position: relative;
-  justify-self: left;
+    position: relative;
+    justify-self: left;
 }

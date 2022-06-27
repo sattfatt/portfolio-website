@@ -1,36 +1,65 @@
 .gd-image-container-back {
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
 .gd-image-container-normal {
-    padding: 20px;
+    margin: 10px 0px;
 }
 
-.gd-image-container-back>img {
+.gd-image-container-back > img {
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
     filter: blur(5px) brightness(0.5);
 }
 
-.gd-image-container-normal>img {
+.gd-image-container-normal > img {
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: fill;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.gd-image-invis>img {
+.gd-image-invis > img {
     opacity: 0;
-    
+
 }
 
-.gd-image-vis>img {
+.gd-image-vis > img {
     opacity: 1;
     transition: 1s linear;
+}
+
+.img-loaded {
+    opacity: 1;
+    transition: 1s;
+}
+
+.img-unloaded {
+    opacity: 0;
+    transition: 1s;
+}
+
+.img-link {
+    text-decoration: none;
+    all: unset;
+}
+
+.img-caption {
+    text-decoration: none;
+    all: unset;
+    text-align: center;
+    background-color: white;
+    color: black;
+    display: block;
+    font-weight: 400;
+    font-size: medium;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

@@ -1,4 +1,4 @@
-import HostedImage from "./GDriveImage";
+import HostedImage from "./HostedImage";
 import Lotus from "./Lotus";
 import "../Styles/Landing.css";
 import DownArrow from "./DownArrow";
